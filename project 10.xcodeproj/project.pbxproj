@@ -13,6 +13,7 @@
 		AFB311762660A3E5002C389B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB311752660A3E5002C389B /* Preview Assets.xcassets */; };
 		AFB31180266237B0002C389B /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3117F266237B0002C389B /* View1.swift */; };
 		AFB31182266237C7002C389B /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB31181266237C7002C389B /* View2.swift */; };
+		AFB3118426627AA8002C389B /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3118326627AA8002C389B /* View3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AFB311772660A3E5002C389B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB3117F266237B0002C389B /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		AFB31181266237C7002C389B /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		AFB3118326627AA8002C389B /* View3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				AFB311702660A3E3002C389B /* ContentView.swift */,
 				AFB3117F266237B0002C389B /* View1.swift */,
 				AFB31181266237C7002C389B /* View2.swift */,
+				AFB3118326627AA8002C389B /* View3.swift */,
 				AFB311722660A3E5002C389B /* Assets.xcassets */,
 				AFB311772660A3E5002C389B /* Info.plist */,
 				AFB311742660A3E5002C389B /* Preview Content */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB311712660A3E3002C389B /* ContentView.swift in Sources */,
+				AFB3118426627AA8002C389B /* View3.swift in Sources */,
 				AFB31180266237B0002C389B /* View1.swift in Sources */,
 				AFB3116F2660A3E3002C389B /* project_10App.swift in Sources */,
 				AFB31182266237C7002C389B /* View2.swift in Sources */,
