@@ -17,6 +17,7 @@
 		AFB311862662840D002C389B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB311852662840D002C389B /* MainView.swift */; };
 		AFB3118826637516002C389B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3118726637516002C389B /* Order.swift */; };
 		AFB3118A26637F8C002C389B /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3118926637F8C002C389B /* AddressView.swift */; };
+		AFB3118C2663A408002C389B /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3118B2663A408002C389B /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AFB311852662840D002C389B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AFB3118726637516002C389B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		AFB3118926637F8C002C389B /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		AFB3118B2663A408002C389B /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				AFB3116E2660A3E3002C389B /* project_10App.swift */,
 				AFB311702660A3E3002C389B /* ContentView.swift */,
 				AFB3118926637F8C002C389B /* AddressView.swift */,
+				AFB3118B2663A408002C389B /* CheckoutView.swift */,
 				AFB3118726637516002C389B /* Order.swift */,
 				AFB3117F266237B0002C389B /* View1.swift */,
 				AFB31181266237C7002C389B /* View2.swift */,
@@ -164,6 +167,7 @@
 				AFB3118A26637F8C002C389B /* AddressView.swift in Sources */,
 				AFB31182266237C7002C389B /* View2.swift in Sources */,
 				AFB3118826637516002C389B /* Order.swift in Sources */,
+				AFB3118C2663A408002C389B /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
