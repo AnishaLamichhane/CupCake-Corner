@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @ObservedObject var order: Order
+    @ObservedObject var newOrder: observableOrder
     
 //    challege 2
     @State private var alertMessage = ""
@@ -25,7 +25,7 @@ struct CheckoutView: View {
                         .scaledToFit()
                         .frame(width: geo.size.width)
                     
-                    Text("Your cost is $\(self.order.cost, specifier: "%.2f")")
+                    Text("Your cost is $\(self.newOrder.order.cost, specifier: "%.2f")")
                         .font(.title)
                         .padding()
                     
@@ -45,7 +45,7 @@ struct CheckoutView: View {
     
     //            challlenge 2
     func placeOrder() {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(newOrder.order) else {
 
             self.alertTitle = "Oops!"
             self.alertMessage = "failed to encode items."
@@ -85,6 +85,6 @@ struct CheckoutView: View {
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(newOrder: observableOrder(order: NewOrder()))
     }
 }
