@@ -9,8 +9,12 @@ import SwiftUI
 
 struct CheckoutView: View {
     @ObservedObject var order: Order
-    @State private var conformationMessage = ""
-    @State private var showingConformation = false
+    
+//    challege 2
+    @State private var alertMessage = ""
+    
+    @State private var alertTitle = ""
+    @State private var showingAlert = false
     
     var body: some View {
         GeometryReader { geo in
@@ -34,14 +38,18 @@ struct CheckoutView: View {
             
         }
         .navigationBarTitle("Checkout", displayMode: .inline)
-        .alert(isPresented: $showingConformation){
-            Alert(title: Text("Thank You"), message: Text(conformationMessage), dismissButton: .default(Text("Okay")))
+        .alert(isPresented: $showingAlert){
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Okay")))
         }
     }
     
+    //            challlenge 2
     func placeOrder() {
         guard let encoded = try? JSONEncoder().encode(order) else {
-            print("failed to encode items")
+
+            self.alertTitle = "Oops!"
+            self.alertMessage = "failed to encode items."
+            self.showingAlert = true
             return
         }
         
@@ -53,15 +61,22 @@ struct CheckoutView: View {
         
         URLSession.shared.dataTask(with: request){ data, resopnse, error in
             guard let data = data else {
-                print("No data in response \(error?.localizedDescription ?? "Unknown Error").")
+                self.alertTitle = "Oops!"
+//                this part is actually seen in alert if wifi is off
+                self.alertMessage = "\(error?.localizedDescription ?? "Unknown Error")."
+                self.showingAlert = true
                 return
             }
             
+            
             if let decodedOrder  = try? JSONDecoder().decode(Order.self, from: data) {
-                self.conformationMessage = "Your order for \(decodedOrder.quantity) * \(Order.types[decodedOrder.type].lowercased()) cupcakes in on the way."
-                self.showingConformation = true
+                self.alertTitle = "Thank You!"
+                self.alertMessage = "Your order for \(decodedOrder.quantity) * \(Order.types[decodedOrder.type].lowercased()) cupcakes in on the way."
+                self.showingAlert = true
             } else {
-                print("Invalid response from the server.")
+                self.alertTitle = "Oops!"
+                self.alertMessage = " Invalid response from the server"
+                self.showingAlert = true
             }
         }.resume()
         
