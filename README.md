@@ -9,5 +9,9 @@ If our call to placeOrder() fails – for example if there is no internet connec
 3. For a more challenging task, see if you can convert our data model from a class to a struct, then create an ObservableObject class wrapper around it that gets passed around. This will result in your class having one @Published property, which is the data struct inside it, and should make supporting Codable on the struct much easier.
 
 
-Uploading project 10.mov…
+
+
+https://user-images.githubusercontent.com/52813885/120210294-58072400-c24f-11eb-89f5-22cd9ca6333c.mov
+
+
 
