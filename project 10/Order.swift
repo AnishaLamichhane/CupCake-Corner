@@ -37,8 +37,15 @@ class Order: ObservableObject, Codable {
         if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
         }
+        
+//        challenge 1
+        if name.hasSpace().isEmpty || streetAddress.hasSpace().isEmpty || city.hasSpace().isEmpty || zip.hasSpace().isEmpty {
+            return false
+        }
+       
         return true
     }
+    
     
 //    for cost of the cake
     var cost: Double {
@@ -89,5 +96,15 @@ class Order: ObservableObject, Codable {
         try container.encode(city, forKey: .city)
         try container.encode(zip, forKey: .zip)
     }
+    
+   
 
+}
+
+//Challenge 1
+extension String {
+    func hasSpace() -> String{
+        let trimmed = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed
+    }
 }

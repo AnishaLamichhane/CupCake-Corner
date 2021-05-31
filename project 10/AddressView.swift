@@ -11,6 +11,7 @@ struct AddressView: View {
 //    this is a property
     @ObservedObject var order: Order
     
+    
     var body: some View {
         Form {
             Section {
